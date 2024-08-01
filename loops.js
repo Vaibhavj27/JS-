@@ -1,4 +1,4 @@
-// date: 31/7/2024
+// date: 31/7/2024 and 1/8/2024
 // for loop
 
 for(let i = 0; i <= 10; i++){
@@ -97,5 +97,46 @@ Example.forEach((item)=>{
     console.log(item.id,item.name);
 })
 
+//for each function cant be used to return value
 
 
+//filter method in javascript
+//filter also has callback function inside it
+const myNums=[1,2,3,4,5,6,7,8,9,10]
+const newNums=myNums.filter((num)=>{
+    return num>5;
+})
+console.log(newNums);
+
+//nesting of methods
+const nums =myNums.map((num)=>num*10)
+            .filter((num)=>num%2===0)
+            .forEach((num)=>console.log(num));
+
+
+// reduce function in javascript
+const cart =[1,2,3]
+const orderTotal=cart.reduce((acc,curr)=>{
+    return acc+curr;
+},0)  // here 0 is the initial value of acc
+
+console.log(orderTotal);
+//reduce function add the all the elements of the array and returns the sum
+
+const shoppingCart=[
+    {
+        item:'Bag',
+        price:299
+    },
+    {
+        item:'shoes',
+        price:399
+    },
+    {
+        item:'watch',
+        price:499
+    }
+]
+
+const total=shoppingCart.reduce((acc,item)=>(acc+item.price),0)
+console.log(total);
